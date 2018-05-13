@@ -24,7 +24,6 @@ class App extends Component {
       fetch(`https://en.wikipedia.org/w/api.php?action=opensearch&origin=*&format=json&formatversion=2&search=${this.state.search}&limit=15`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         this.setState({results: data, search: '' })
         resultsBox.classList.add('show');
       });
